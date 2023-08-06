@@ -1,30 +1,63 @@
 <script setup lang="ts">
-import HelloWorld from './components/HelloWorld.vue'
+import {createNamespace} from "@vue3-marquee/utils/create";
+import VMarquee from "@vue3-marquee/components/marquee/src/marquee.vue";
+import {imageList, textList} from "@vue3-marquee/components/marquee/src/list";
+import {ref} from "vue";
+
+const loadedImages = ref(0)
+
 </script>
 
 <template>
-  <div>
-    <a href="https://vitejs.dev" target="_blank">
-      <img src="/vite.svg" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://vuejs.org/" target="_blank">
-      <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
-    </a>
+  <div class="play-content">
+    <h1>Vue3 Mini Marquee</h1>
+    <p>一款轻量级的Vue3跑马灯组件</p>
+    <h2>鸣谢</h2>
+    <v-marquee :speed="20" direction="left">
+      <div class="imageList">
+        <img class="marquee-img" v-for="(item, index) in imageList" :key="index" :src="item" alt="">
+      </div>
+    </v-marquee>
+    <v-marquee :speed="20" direction="right">
+      <div class="imageList">
+        <p class="marquee-img" v-for="(item, index) in textList" :key="index">{{ item }}</p>
+      </div>
+    </v-marquee>
   </div>
-  <HelloWorld msg="Vite + Vue" />
 </template>
 
-<style scoped>
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
+<style scoped lang="less">
+.play-content {
+  h1 {
+    font-family: "Helvetica Neue", serif;
+    font-weight: 700;
+    font-size: 80px;
+    line-height: 98px;
+    color: #2E353B;
+    font-style: italic;
+    text-align: center;
+  }
+
+  P {
+    font-size: 32px;
+    color: #000;
+    text-align: center;
+    font-weight: bold;
+  }
+
+  h2 {
+    text-align: center;
+    color: #757E8F;
+    font-weight: bold;
+  }
 }
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
+
+.imageList {
+  display: flex;
+  .marquee-img {
+    height: 64px;
+    margin-right: 100px;
+  }
 }
-.logo.vue:hover {
-  filter: drop-shadow(0 0 2em #42b883aa);
-}
+
 </style>
