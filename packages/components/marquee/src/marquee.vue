@@ -17,7 +17,7 @@ const marqueeContent = ref(null)
 const props = defineProps({
   speed: {
     type: Number,
-    default: 20
+    default: 50
   },
   direction: 'left' | 'right',
   delay: {

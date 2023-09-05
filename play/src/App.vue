@@ -1,7 +1,6 @@
 <script setup lang="ts">
-import {createNamespace} from "@vue3-marquee/utils/create";
-import VMarquee from "@vue3-marquee/components/marquee/src/marquee.vue";
-import {imageList, textList} from "@vue3-marquee/components/marquee/src/list";
+import VMarquee from "vue3-marquee-mini/marquee";
+import {imageList, textList} from "vue3-marquee-mini/marquee/src/list";
 import {ref} from "vue";
 
 const loadedImages = ref(0)
@@ -10,15 +9,15 @@ const loadedImages = ref(0)
 
 <template>
   <div class="play-content">
-    <h1>Vue3 Mini Marquee</h1>
+    <h1>Vue3 Marquee Mini </h1>
     <p>一款轻量级的Vue3跑马灯组件</p>
     <h2>鸣谢</h2>
-    <v-marquee :speed="20" direction="left">
+    <v-marquee :speed="50" direction="left">
       <div class="imageList">
         <img class="marquee-img" v-for="(item, index) in imageList" :key="index" :src="item" alt="">
       </div>
     </v-marquee>
-    <v-marquee :speed="20" direction="right">
+    <v-marquee :speed="50" direction="right">
       <div class="imageList">
         <p class="marquee-img" v-for="(item, index) in textList" :key="index">{{ item }}</p>
       </div>
