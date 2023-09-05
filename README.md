@@ -3,13 +3,7 @@
 ![Static Badge](https://img.shields.io/badge/npm-v1.0.0-red)
 
 
-- Single quotes, no semi
-- Auto fix for formatting (aimed to be used standalone **without** Prettier)
-- Designed to work with TypeScript, Vue out-of-box
-- Lint also for json, yaml, markdown
-- Sorted imports, dangling commas
-- Reasonable defaults, best practices, only one-line of config
-- **Style principle**: Minimal for reading, stable for diff
+- A mini Vue 3 marquee component
 
 ## Usage
 
@@ -83,6 +77,11 @@ pnpm add vue3-marquee-mini
 </style>
 
 ```
+## TODO
+- [x] 打包为 npm 插件发布到 npm
+- [ ] 使用 VitePress 编写文档并托管到 Github Pages [Vite & Vue Powered Static Site Generator](https://vitepress.dev/)
+- [ ] 使用TS重构
+- [ ] 支持d.ts类型提示
 
 
 ## License
