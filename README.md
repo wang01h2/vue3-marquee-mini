@@ -1,6 +1,6 @@
 # vue3-marquee-mini
 
-![Static Badge](https://img.shields.io/badge/npm-v1.0.0-red)
+![Static Badge](https://img.shields.io/badge/npm-v1.0.1-red)
 
 
 - A mini Vue 3 marquee component
