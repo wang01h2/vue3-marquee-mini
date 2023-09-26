@@ -1,6 +1,6 @@
 {
   "name": "vue3-marquee-mini",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "使用vite发布自定义组件到npm",
   "files": [
     "dist"
